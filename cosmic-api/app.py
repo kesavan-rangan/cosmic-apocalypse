@@ -14,3 +14,9 @@ async def say_user(user: str = ""):
         return {"message": "name not specified"}
     else:
         return {"message": f"Hi {user}!!!"}
+
+
+@app.get("/query/{query_id}")
+async def query(query_id):
+    return {"message": query_id}
+
